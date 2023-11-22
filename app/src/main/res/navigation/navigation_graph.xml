@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/cartoonListFragment">
+
+    <fragment
+        android:id="@+id/cartoonListFragment"
+        android:name="com.arifmuratpoyraz.cartoonstory.view.CartoonListFragment"
+        android:label="CartoonListFragment" >
+        <action
+            android:id="@+id/action_cartoonListFragment_to_cartoonDetailFragment"
+            app:destination="@id/cartoonDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartoonDetailFragment"
+        android:name="com.arifmuratpoyraz.cartoonstory.view.CartoonDetailFragment"
+        android:label="CartoonDetailFragment" >
+        <action
+            android:id="@+id/action_cartoonDetailFragment_to_cartoonListFragment"
+            app:destination="@id/cartoonListFragment" />
+    </fragment>
+</navigation>
